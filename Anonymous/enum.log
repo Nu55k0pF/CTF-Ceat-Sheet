@@ -1,0 +1,47 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Tue Dec 15 17:17:01 2020
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.10.200.169
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ===================================================== 
+|    Enumerating Workgroup/Domain on 10.10.200.169    |
+ ===================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ====================================== 
+|    Session Check on 10.10.200.169    |
+ ====================================== 
+[+] Server 10.10.200.169 allows sessions using username '', password ''
+
+ ============================================ 
+|    Getting domain SID for 10.10.200.169    |
+ ============================================ 
+Domain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ========================================== 
+|    Share Enumeration on 10.10.200.169    |
+ ========================================== 
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	pics            Disk      My SMB Share Directory for Pics
+	IPC$            IPC       IPC Service (anonymous server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available
+
+[+] Attempting to map shares on 10.10.200.169
+//10.10.200.169/print$	Mapping: DENIED, Listing: N/A
+//10.10.200.169/pics	Mapping: OK, Listing: OK
+//10.10.200.169/IPC$	[E] Can't understand response:
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
+enum4linux complete on Tue Dec 15 17:17:04 2020
+

