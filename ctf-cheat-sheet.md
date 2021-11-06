@@ -64,8 +64,16 @@ Only show matches
 ```
 2> /dev/null
 ```
+Execute command/use file as another user
+```
+sudo -u "username" "path/to/command" "path/to/file"
+```
 ## Python helper
 Start a quick HTTP server
 ```
 python3 -m http.server [PORT]
+```
+Spawn a shell
+```
+python -c 'import pty; pty.spawn("/bin/bash")'
 ```
