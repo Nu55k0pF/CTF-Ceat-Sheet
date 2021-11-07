@@ -1,0 +1,60 @@
+DirBuster 1.0-RC1 - Report
+http://www.owasp.org/index.php/Category:OWASP_DirBuster_Project
+Report produced on Sat Dec 12 19:56:46 EST 2020
+--------------------------------
+
+http://10.10.153.15:80
+--------------------------------
+Directories found during testing:
+
+Dirs found with a 200 response:
+
+/
+/assets/
+/assets/js/
+/icons/
+/assets/img/
+/uploads/
+/assets/css/
+/assets/fonts/
+/icons/small/
+/css/
+/js/
+
+Dirs found with a 403 response:
+
+/cgi-bin/
+
+Dirs found with a 500 response:
+
+/css/uploads/
+/css/assets/
+/js/uploads/
+/js/assets/
+
+
+--------------------------------
+Files found during testing:
+
+Files found with a 200 responce:
+
+/assets/js/snowstorm-min.js
+/assets/js/preauth.js
+/assets/js/boxfade.js
+/assets/js/upload.js
+/icons/apache_pb.svg
+/assets/css/auth.css
+/assets/css/buttons.css
+/assets/fonts/LICENSE.txt
+/assets/css/lemonada.css
+/assets/css/lightrope.css
+/assets/fonts/Lemonada-Light.ttf
+/assets/fonts/OFL.txt
+/assets/css/preauth.css
+/assets/fonts/Roboto-Regular.ttf
+/assets/css/roboto.css
+/assets/css/sawarabi.css
+/assets/fonts/SawarabiMincho-Regular.ttf
+
+
+--------------------------------
