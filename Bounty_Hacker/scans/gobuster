@@ -1,0 +1,6 @@
+/.htaccess            (Status: 403) [Size: 276]
+/.hta                 (Status: 403) [Size: 276]
+/.htpasswd            (Status: 403) [Size: 276]
+/images               (Status: 301) [Size: 311] [--> http://10.10.47.74/images/]
+/index.html           (Status: 200) [Size: 969]
+/server-status        (Status: 403) [Size: 276]
