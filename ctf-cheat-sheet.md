@@ -77,3 +77,11 @@ Spawn a shell
 ```
 python -c 'import pty; pty.spawn("/bin/bash")'
 ```
+## Other Stuff
+
+### Dirbuster
+
+List of common file extentions
+```
+php, pl, sh, asp, html, json, py, cfm, aspx, rb, cgi
+```
