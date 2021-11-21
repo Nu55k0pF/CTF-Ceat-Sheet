@@ -1,0 +1,24 @@
+# Nmap 7.92 scan initiated Wed Nov 17 17:27:39 2021 as: nmap --script=vuln -vv -oA scans/second 10.10.228.174
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.10.228.174
+Host is up, received syn-ack (0.048s latency).
+Scanned at 2021-11-17 17:28:14 EST for 21s
+Not shown: 997 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON
+21/tcp open  ftp     syn-ack
+22/tcp open  ssh     syn-ack
+80/tcp open  http    syn-ack
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed Nov 17 17:28:35 2021 -- 1 IP address (1 host up) scanned in 55.95 seconds

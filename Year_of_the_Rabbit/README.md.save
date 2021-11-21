@@ -1,0 +1,80 @@
+# Year Of The Rabbit
+
+## Recon
+
+Runing an nmap scan against the target.
+
+FTP SSH and http are runing. Visiting the HTTP Site I'm greeted with an apacha default landing page.
+
+### HTTP
+
+runing dirbuster while reading the landing page
+
+	gobuster dir --url http://10.10.98.211 -w /usr/share/seclists/Discovery/Web-Content/common.txt -o scans/gobuster
+
+found assets with rickrol mp4
+
+Found no exploit for this apache version on Exploit DB. But According to 
+https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0226
+this exploit couol work:
+https://www.exploit-db.com/exploits/34133
+
+There are sevaral issus in this version of apache that I want to try and attack
+
+https://www.tenable.com/plugins/was/98910 
+
+I did some reading and found some intresting things I want to try
+
+- CVE-2016-5387
+
+The first thing I want to test is Httpoxy
+
+	git clone https://github.com/1N3/HTTPoxyScan.git
+
+After fiddling around with this script I didn't finde anything. So on to more enumeration. Whole runing dirbuster on the side with a big list and file extentions
+
+- CVE-2016-8743
+
+runing a whole lot of stuff used Metasploit Apache user enumeration tool but did not find anything. 
+Runing Nikto
+
+** -> I think I'am overcomplicating this, I can run the rickrol, so I should test if I can upload a file to /assets and run an exploit from there **
+
+I was still makeing everything to complicated (for a CTF at least) In the stylesheet there is a hint
+
+	Nice to see someone checking the stylesheets.
+	Take a look at the page: /sup3r_s3cr3t_fl4g.php
+  	
+-> it's another rickroll XD
+
+The Popup says to disable javascript. In firefox type about:config in the adressbar and set javascript.enable to false
+
+then a new window shows up:
+
+
+´´´
+Love it when people block Javascript...
+This is happening whether you like it or not... The hint is in the video. If you're stuck here then you're just going to have to bite the bullet!
+Make sure your audio is turned up!
+´´´
+
+Continue here do another nmpa scan but use -vv
+
+	nmap --script=vuln -vv -oA scans/second 10.10.228.174
+
+
+
+
+
+
+### FTP
+
+For this Version of vsftpd I found https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-1419
+
+
+
+## Important info
+
+my IP: 10.9.222.124
+
+target IP: 10.10.168.139
