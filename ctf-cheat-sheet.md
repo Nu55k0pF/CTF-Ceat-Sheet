@@ -89,9 +89,12 @@ Start a quick HTTP server
 ```
 python3 -m http.server [PORT]
 ```
-Spawn a shell
+Spawn a shell and stabilize
 ```
 python -c 'import pty; pty.spawn("/bin/bash")'
+export TERM=xterm
+ctrl + z
+stty raw -echo; fg
 ```
 ## Other Stuff
 
