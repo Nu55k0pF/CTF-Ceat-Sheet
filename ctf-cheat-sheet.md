@@ -96,6 +96,13 @@ export TERM=xterm
 ctrl + z
 stty raw -echo; fg
 ```
+
+If the shell dies there will be no output, type
+
+```
+reset
+```
+
 ## Other Stuff
 
 ### Dirbuster
