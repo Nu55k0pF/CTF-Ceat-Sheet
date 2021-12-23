@@ -24,6 +24,19 @@ export TERM=xterm
 
 stty raw -echo; fg
 ```
+
+```
+rlwrap nc -lvnp <port>
+
+stty raw -echo; fg
+```
+
+If the shell dies there will be no output, type
+
+```
+reset
+```
+
 ## Get reverse shell
 
 atk:
@@ -92,15 +105,6 @@ python3 -m http.server [PORT]
 Spawn a shell and stabilize
 ```
 python -c 'import pty; pty.spawn("/bin/bash")'
-export TERM=xterm
-ctrl + z
-stty raw -echo; fg
-```
-
-If the shell dies there will be no output, type
-
-```
-reset
 ```
 
 ## Other Stuff
